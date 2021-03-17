@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root {
+        --radius: 100px;
+        --scale: calc(3600px/10);
+        --deg: 0deg;
+        --dur: 4;
+    --repeat: infinite;
+            }
+    body{
+
+        background-image: url("nubes pequeñas.png");
+        background-color: aquamarine;
+        margin: 0px;
+    }
+    div{
+        height: 100px;
+        width: 100px;        
+        position:absolute;
+        background-image: url("prueba1.png");
+        background-repeat: repeat-x;
+        background-size: 960px 300px;
+        animation: animatedBackground 5s linear infinite;
+    }
+    @keyframes animatedBackground {
+    0% {top:200px; left:0px; background-position: calc(var(--scale)/1) 0px;}
+    100% {top:20px; left:300px; background-position:860px 0;}
+    }
+    @keyframes example {
+    0%   {left:-100px; top:0px;}
+    100%  {left:100%; top:0px;}
+    }
+    position: absolute;
+        left: -100px;
+        top: 200px;
+        animation-name: example;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-iteration-count: 3;
+    }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

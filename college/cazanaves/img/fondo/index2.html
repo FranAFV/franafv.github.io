@@ -1,0 +1,86 @@
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="module" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+#tStart1{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    color:  rgba(58, 169, 243);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 120px;
+}
+#tStart2{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    z-index: -1;
+    font-size: 120px;
+    color:  rgba(58, 169, 243);
+    -webkit-text-stroke: 15px rgb(127, 235, 145);
+    text-shadow: 5px 5px 40px  rgba(58, 169, 243, 0.6),-5px 5px 40px  rgba(58, 169, 243, 0.6),5px -5px 40px  rgba(58, 169, 243, 0.6),-5px -5px 40px  rgba(58, 169, 243, 0.6);
+    box-shadow: 0px 0px 50px 60px blue;
+}
+
+/* div{
+    background-color: antiquewhite;
+    height: 200px;
+    width: 200px;
+    -webkit-transition: height 2s ease;
+    -moz-transition: height 2s ease;
+    -ms-transition: height 2s ease;
+    transition: height 2s ease;
+}
+div:hover{
+    width: 300px;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+div:hover {
+  width: 300px;
+}
+#tStart2:hover{
+    scale(1.5);
+} */
+.zoom {
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+    </style>
+</head>
+<body>
+    <br><br><br><br><br><br><br><br><br><br>
+        <!-- <div class="creditstitles" id="tGameTitle">¡A la caza del espacio!</div> -->
+        <div class="zoom">        
+            <p id="tStart1">¡Pulse para iniciar el juego!</p>
+            <p id="tStart2">¡Pulse para iniciar el juego!</p>
+        </div>
+
+</body>
+</html>

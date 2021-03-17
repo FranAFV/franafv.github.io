@@ -1,0 +1,17 @@
+[
+        {
+            "name": "cazanaves",
+            "meta": {
+                "fullName": "UFO Hunter, The Game",
+                "description": "Speed game. Shoot down the UFOs and don't let them land. Explode the asteroids to get extra points. Avoid touch the human rockets.",
+                "photo": "cazanaves.png",
+                "date": "Dec 2019",
+                "tags": [
+                    "javascript",
+                    "game",
+                    "modules",
+                    "classes"
+                ]
+            }
+        }
+]

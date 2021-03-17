@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .i{
+        }
+        #i1{
+            background-color: blue;
+            height: 100vh;
+        }
+        #i2>:nth-child(2)>div>div{
+            /* -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+            mask-image: linear-gradient(to top, transparent 5%, black 100%); */
+            mask: none;
+            -webkit-mask-position: -50px -50px;
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.1" preserveAspectRatio="none"><path d="M1,0H0V1.1 C 0.66,1.1,.33,1,1,1 V0 Z"/></svg>');
+        }
+        #i3{
+            background-color: yellow;
+            height: 100vh;
+
+        }
+        #i4{
+            background-color: red;
+            height: 100vh;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="i1" class="i">
+    </div>
+    <div id="i2" class="i">
+        <div style="height: 100vh;position: relative;">
+            <div style="height: 200%;position: relative;top: 0;left: 0;">
+                <div style="position: sticky;top: 0%; background-color: burlywood;"> 
+                    <div style="height: 100vh;"></div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 100vh;position: relative;">
+            <div style="height: 200%;position: relative;top: -100%;left: 0;">
+                <div style="position: sticky;top: 0;background-color: rgb(137, 255, 91);">
+                <!-- <div style="position: sticky;top: 0;background-color: black; -webkit-mask-position: 10;-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1.1" preserveAspectRatio="none"><path d="M1,0H0V1.1 C 0.66,1.1,.33,1,1,1 V0 Z"/></svg>');mask-po"*/> -->
+                    <div style="height: 100vh;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="i3" class="i">
+    </div>
+    <div id="i4" class="i">
+    </div>
+</body>
+</html>

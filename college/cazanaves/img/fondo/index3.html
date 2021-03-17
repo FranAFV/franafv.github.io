@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+
+<style>
+    body{
+        overflow: hidden;
+        margin: 0px;
+        /* min-width: 720px;
+        min-height: 720px; */
+    }
+    /* 
+    * {
+    box-sizing: border-box;
+    } */
+    :root{
+        --colorfondomenu: rgb(70, 138, 6);
+        --colorfondomenuborde:rgb(222, 184, 135) ;
+        /* --colorfondomenuborde:burlywood ; */
+    }
+    #menulayer{
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        /* background-color: antiquewhite; */
+        text-align: center;
+        vertical-align: middle;
+        background-image: url("./World.png");
+    }
+    #menu{  
+        height: 50vh;   
+        /* min-height: 300px; */
+        /* max-height: 500px; */
+        width: 50vw;
+        /* max-width: 650px;*/
+        /* min-width: 500px; */
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:  var(--colorfondomenu);
+        border-radius: 60px;
+        /* border: 5vh solid var(--colorfondomenuborde); */
+        box-shadow: 0px 0px 0px 5vmin var(--colorfondomenuborde);
+        border-width: 20px;
+        text-align: center;
+        vertical-align: middle;
+
+
+        background: linear-gradient(-45deg, rgb(70, 138, 6), #23a6d5, #23d5ab,  rgb(70, 138, 6),rgb(70, 138, 6));
+	    background-size: 400% 400%;
+	    animation: gradientBG 20s ease infinite;
+    }
+    @keyframes gradientBG {
+	    0% {
+		    background-position: 0% 50%;
+	    }
+	    50% {
+		    background-position: 100% 50%;
+	    }
+	    100% {
+		    background-position: 0% 50%;
+	    }
+    }
+    #title{
+        position: relative;
+        top: 35%;
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        font-family: 'Mansalva', cursive;
+        font-family: 'Oswald', sans-serif;
+        font-family: 'Amatic SC', cursive;
+        font-family: 'Walter Turncoat', cursive;
+        font-family: 'Patrick Hand SC', cursive;
+        line-height: 0.7;
+        /* font-weight: bold; */
+        /* font-size: 80px; */
+        font-size: 5vw;
+        color: whitesmoke;
+        /* text-shadow: 1px 1px 50px rgb(0, 0, 0), 1px 1px 50px rgb(0, 0, 0); */
+        text-shadow: -1px -1px 20px rgb(22, 120, 138), 1px -1px 20px rgb(22, 120, 138), -1px 1px 20px rgb(22, 120, 138), 1px 1px 20px rgb(22, 120, 138);
+        /* text-shadow: -10px -10px 0px rgb(0, 0, 0) 10px -10px 50px rgb(0, 0, 0) -10px 10px 50px rgb(0, 0, 0) 10px 10px 50px rgb(0, 0, 0); */
+        animation: titleanimation 5s linear 0s infinite /*alternate*/ ;
+    }
+
+    /* #tStart1{
+        position: relative;
+        top: 30%;
+        background-color: brown;
+    } */
+
+    #tStart1{
+        /* font-family: 'Oswald', sans-serif; */
+        font-family: 'Amatic SC', cursive;
+        position: relative;
+        top: 45%;
+        color:  rgba(0,0,0);
+        /* font-family: 'Open Sans Condensed', sans-serif; */
+        font-weight: bold;
+        font-size: 1.5vw;
+        /* text-shadow: 10px 10px 50px rgba(58, 169, 243); */
+        transition: all 4s ease;
+        /* animation: subtitleanimation 2s linear 0s infinite alternate ; */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode;     */
+    }
+    @keyframes titleanimation{
+        25%{
+            /* text-shadow: 1px 1px 10px;  */
+            /* text-shadow: -1px -1px 10px rgb(207, 245, 40), 1px -1px 10px  rgb(207, 245, 40), -1px 1px 10px  rgb(207, 245, 40), 1px 1px 10px  rgb(207, 245, 40); */
+            
+            /* text-shadow: -1px -1px 20px rgb(40, 214, 245), 1px -1px 20px  rgb(40, 214, 245), -1px 1px 20px  rgb(40, 214, 245), 1px 1px 20px  rgb(40, 214, 245); */
+            transform: translate(-2%, 40%);
+        }
+        50%{
+            /* text-shadow: -1px -1px 20px rgb(105, 245, 40), 1px -1px 20px  rgb(105, 245, 40), -1px 1px 20px  rgb(105, 245, 40), 1px 1px 20px  rgb(105, 245, 40); */
+            
+            /* text-shadow: 1px 1px 10px rgb(105, 245, 40);  */
+        }
+        50%{
+            /* text-shadow: -1px -1px 20px rgb(40, 214, 245), 1px -1px 20px  rgb(40, 214, 245), -1px 1px 20px  rgb(40, 214, 245), 1px 1px 20px  rgb(40, 214, 245); */
+            transform: translate(2%, 2%);
+
+            /* text-shadow: 1px 1px 10px rgb(40, 214, 245);  */
+        }     
+        75%{
+            /* text-shadow: -1px -1px 20px rgb(22, 120, 138), 1px -1px 20px rgb(22, 120, 138), -1px 1px 20px rgb(22, 120, 138), 1px 1px 20px rgb(22, 120, 138); */
+            transform: translate(8%, 50%);
+
+            /* text-shadow: 1px 1px 10px rgb(0, 0, 0,0.5); */
+            /* transform: scale(1.2); */
+            /* text-shadow: 5px 5px 40px  rgba(58, 169, 243, 0.6),-5px 5px 40px  rgba(58, 169, 243, 0.6),5px -5px 40px  rgba(58, 169, 243, 0.6),-5px -5px 40px  rgba(58, 169, 243, 0.6); */
+        }
+        100%{
+            transform: translate(0%, 0%);
+
+        }
+    }
+    /* @keyframes subtitleanimation{ */
+        #tStart1:hover{
+        /* to{ */
+            /* color: black; */
+            transform: scale(1.5);
+            /* text-shadow: 5px 5px 40px  rgba(58, 169, 243, 0.6),-5px 5px 40px  rgba(58, 169, 243, 0.6),5px -5px 40px  rgba(58, 169, 243, 0.6),-5px -5px 40px  rgba(58, 169, 243, 0.6); */
+
+        /* } */
+        }
+    /* } */
+    .menu {
+        /* padding: 10vh; */
+        background-color: green;
+        transition: transform .2s;
+        border-radius: 50px;
+        text-align:center;
+        vertical-align: middle; 
+        margin:200px;
+        /* margin: 0 auto;
+        height: 200px;
+        width: 300px; */
+        /* position: absolute; */
+        /* position: sticky; */
+        /* top: 0; */
+        box-shadow: 0px 0px 100px 0px blue;
+    }
+    .zoom {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .menu:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+    }
+    /* #tStart1{
+        font-family: 'Oswald', sans-serif;
+        position: relative;
+        color:  rgba(58, 169, 243);
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 120px;
+    }
+    /*
+    #tStart2{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+        position: relative;
+        z-index: -1;
+        font-size: 120px;
+        color:  rgba(58, 169, 243);
+        -webkit-text-stroke: 15px rgb(127, 235, 145);
+        text-shadow: 5px 5px 40px  rgba(58, 169, 243, 0.6),-5px 5px 40px  rgba(58, 169, 243, 0.6),5px -5px 40px  rgba(58, 169, 243, 0.6),-5px -5px 40px  rgba(58, 169, 243, 0.6);
+        box-shadow: 0px 0px 50px 60px blue;
+    } */
+
+</style>
+</head>
+<body>
+<div id="menulayer">
+        <div id="menu">
+            <div id="titleGame">¡A la caza del espacio!</div>
+            <div id="titleStart">¡Pulse para iniciar el juego!</div>
+            <!-- <div id="tStart2">¡Pulse para iniciar el juego!</div> -->
+        </div>
+</div>
+</body>
+</html>
+
+<!-- 
+<div class="menu">
+        <div class="zoom">        
+                <div id="tStart1">¡Pulse para iniciar el juego!</div>
+                <div id="tStart2">¡Pulse para iniciar el juego!</div>
+        </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+shdfhjfhjdfh -->
