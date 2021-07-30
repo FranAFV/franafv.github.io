@@ -34,7 +34,7 @@
 }
 @font-face {
   font-family: font;
-  src: url(fonts/Garland.otf)
+  src: url(fonts/Garland.woff)
 }
 *{
     margin:0;
