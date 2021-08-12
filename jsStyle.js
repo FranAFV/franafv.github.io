@@ -1,5 +1,6 @@
 var confStyle={
-    'displayHeader':{'displayID':'social','displayWhenIdDisappear':'welcome'} /**Debe ser un hijo directo de body para que funcione bien, si no habría que sumar sucesivos offsetTop de hasta el abuelo hijo de body */ 
+    'displayHeaderBackground':{'displayID':'social','displayWhenIdDisappear':'welcome'}, /**Debe ser un hijo directo de body para que funcione bien, si no habría que sumar sucesivos offsetTop de hasta el abuelo hijo de body */ 
+    'displayShadow':{'displayID':'projects','displayWhenIdAppear':'shadow'}
 }
 
 /**Control - Close(remove) elements*/
@@ -51,38 +52,45 @@ var scrollPosition = 0;
 var eventScroll;
 document.addEventListener('scroll',(e)=>{
     if(canScroll==true){
-        //eventScroll=e
         canScroll=false
-        /* eventGradient.target=e.target;
-        eventGradient.currentTarget=e.currentTarget;
-        eventGradient.offsetY=e.offsetY;
-        eventGradient.offsetX=e.offsetX; */
-        requestAnimationFrame(displayHeader);
+        requestAnimationFrame(funcionesScroll);
     }
 })
-function displayHeader() {
-    let developer = document.getElementById(confStyle.displayHeader.displayWhenIdDisappear)
-    let element = document.getElementById(confStyle.displayHeader.displayID)
+function funcionesScroll() {
+    displayHeaderBackground();
+    displayShadow();
+    canScroll=true
+}
+function displayHeaderBackground() {
+    let developer = document.getElementById(confStyle.displayHeaderBackground.displayWhenIdDisappear)
+    let element = document.getElementById(confStyle.displayHeaderBackground.displayID)
 
-    if (window.scrollY>developer.offsetTop+developer.offsetHeight-(element.parentElement.offsetHeight*2)) {
+    if (window.scrollY>/*developer.offsetTop+*/developer.offsetHeight-(element.parentElement.offsetHeight*2)) {
         //element.style.opacity='1'
         element.style.backgroundColor='#150940'
         element.style.backgroundImage='radial-gradient(circle at 100% 80%,#501731,#00000000 )';  
-/*         element.parentElement.style.borderBottom='1px solid rgba(240, 248, 255, 0.39)';
- */    }
+    }
     else{
-        //element.style.opacity='0';
         element.style.backgroundColor='#15094000'
         element.style.backgroundImage='';
-/*         element.parentElement.style.borderBottom='0px solid rgba(240, 248, 255, 0.39)';
- */
-    }
-    canScroll=true
-/*     console.log(element);
-    console.log(eventScroll);
-    console.log(window.scrollY); */
-}
 
+    }
+
+}
+function displayShadow() {
+    let element = document.getElementById(confStyle.displayShadow.displayWhenIdAppear)
+    let developer = document.getElementById(confStyle.displayShadow.displayID)
+    element.style.opacity= 1-((developer.offsetHeight-window.scrollY)/developer.offsetHeight);
+}
+/**Control Buttons Gallery */
+document.querySelectorAll('.galleryNext').forEach(e=>e.addEventListener('click',e=>{
+    if (!e.disabled){
+        let items = e.currentTarget.parentElement.parentElement.children[1]
+        let itemsWidthDisplayed = items.offsetWidth;
+        let itemsWidthReal = items.children[0].offsetWidth;
+        let itemsChildrenWidth = items.children[0].children[0].offsetWidth;
+    }
+}))
 /* //var e= false;
 document.addEventListener('scroll',scroll)
 function scroll(e) {

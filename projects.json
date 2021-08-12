@@ -13,5 +13,20 @@
                     "classes"
                 ]
             }
+        },
+        {
+            "name": "tuprediccion",
+            "meta": {
+                "fullName": "tuPrediccion",
+                "description": "Spain Weather Prediccions. Source: API AEMET.",
+                "photo": "tuprediccion.png",
+                "date": "Jun 2020",
+                "tags": [
+                    "javascript",
+                    "php",
+                    "api"
+                ]
+            },
+            "url":"http://193.70.88.245/"
         }
 ]
