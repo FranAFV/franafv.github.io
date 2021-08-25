@@ -18,6 +18,7 @@ var father = document.querySelector('.radialFather')
 var movedGradient=true;
 var eventGradient={};
 father.addEventListener('mousemove',(e)=>{
+    console.log("muevo")
     if(movedGradient==true){
         movedGradient=false
         eventGradient.target=e.target;
@@ -38,7 +39,7 @@ function moveGradient(){
      
     x = -father.offsetWidth+eventGradient.offsetX+x;
     y = -father.offsetHeight+eventGradient.offsetY+y-fontSize;
-    //console.log('x '+x+'y '+y)
+    console.log('x '+x+'y '+y)
 
     radial.style.backgroundPositionX=x+'px';
     radial.style.backgroundPositionY=y+'px';
@@ -80,7 +81,7 @@ function displayHeaderBackground() {
 function displayShadow() {
     let element = document.getElementById(confStyle.displayShadow.displayWhenIdAppear)
     let developer = document.getElementById(confStyle.displayShadow.displayID)
-    element.style.opacity= 1-((developer.offsetHeight-window.scrollY)/developer.offsetHeight);
+    element.style.opacity= 1-((developer.offsetHeight-window.scrollY*2)/developer.offsetHeight);
 }
 /**Control Buttons Gallery */
 document.querySelectorAll('.galleryNext').forEach(e=>e.addEventListener('click',e=>{
@@ -108,3 +109,21 @@ function scroll(e) {
    console.log('vk')
 document.removeEventListener('scroll',scroll) 
 } */
+
+var observer = new IntersectionObserver(showSkills, {root:null, rootMargin:"0px", threshold:0.2})
+document.querySelectorAll("#code li").forEach(element => {
+    observer.observe(element)
+});
+document.querySelectorAll("#tools li").forEach(element => {
+    observer.observe(element)
+});
+function showSkills(entities) {
+    entities.forEach(e=>{
+        if (e.isIntersecting) {
+            e.target.style.opacity="1"
+        }
+        else{
+            e.target.style.opacity="0"
+        }
+    })
+}
