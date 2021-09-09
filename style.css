@@ -341,7 +341,27 @@ margin: 0.5rem 0;
     display: inline-block;
     border-radius: 0.5rem;
 }
-
+.repository{
+    font-size: large;
+    font-weight: 300;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #443f41bb;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+.repository i{
+    margin-right: 0.3rem;
+}
+.repository a{
+    text-decoration: none;
+}
+.repository:hover{
+    text-shadow: rgb(73, 90, 242) 0px 0px 1rem;
+    box-shadow: rgba(73, 90, 242, 0.637) 0px 0px 2rem;;
+}
 
 #about{
     background-color: cadetblue;
@@ -369,6 +389,13 @@ margin: 0.5rem 0;
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
+}
+@media (max-width:576px){
+    #places{
+        padding-left: 0rem!important;
+        padding-right: 0rem!important;
+        max-width: 100%!important;
+    }
 }
 #places{
     padding-top: 1rem!important;
@@ -401,16 +428,36 @@ margin: 0.5rem 0;
     background-color: rgb(59, 226, 59);
     color: rgb(54, 54, 54);
     font-weight: 600!important;
+    transition-delay: 0s;
     transition-duration: 500ms;
 }
 .levelB{
     background-color: rgba(243, 240, 82, 0.8);
     color: rgb(15, 15, 15);
     font-weight: 500!important;
+    transition-delay: 0.5s;
+
     transition-duration: 1300ms;
 }
 .levelC{
     background-color: rgba(248, 66, 66, 0.4);
     font-weight: 300!important;
+    transition-delay: 1s;
     transition-duration: 2000ms;
+}
+footer{
+    position: relative;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 3rem;
+    width: 100%;
+    justify-items: center;
+}
+footer h3{
+    text-align: center;
+    width: 100%;
+    font-weight: 200;
+    font-size: 1rem;
+    padding: 0.5rem;
 }

@@ -45,12 +45,26 @@ function fillProjects(json,id) {
                 let date =document.createElement('div')
                 date.className='date'
                 date.textContent=i.meta.date
+                let repo = document.createElement('div')
+                if(i.meta.repository){
+                    repo.className='repository'
+                    let repoA=document.createElement('a')
+                    repoA.href=i.meta.repository.url
+                    if (i.meta.repository.type=="github"){
+                        let repoI=document.createElement('i')
+                        repoI.className="fab fa-github pl-1"
+                        repoA.appendChild(repoI)
+                    }
+                    repoA.appendChild(document.createTextNode("fork me"))//="fork me";
+                    repo.appendChild(repoA)
+                }
 
             e.appendChild(img)
             e.appendChild(name)
             e.appendChild(description)
             e.appendChild(tags)
             e.appendChild(date)
+            e.appendChild(repo) //TODO corregir posible null
 
         a.href=i.url?i.url:"./college/"+i.name+"/index.html"
         a.appendChild(e)

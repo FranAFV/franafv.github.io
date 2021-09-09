@@ -11,7 +11,8 @@
                     "game",
                     "modules",
                     "classes"
-                ]
+                ],
+                "repository":{"type":"github","url":""}
             }
         },
         {
@@ -24,9 +25,29 @@
                 "tags": [
                     "javascript",
                     "php",
-                    "api"
-                ]
+                    "api",
+                    "mysql",
+                    "mongodb"
+                ],
+                "repository":{"type":"github","url":"https://github.com/FranAFV/PI_tuPrediccion"}
             },
             "url":"http://193.70.88.245/"
+        },
+        {
+            "name": "jRecomendador",
+            "meta": {
+                "fullName": "JRecomendador",
+                "description": "Prueba concepto. Recomendador musical basado en elección de estado de ánimo. Lee tu biblioteca personal y ofrece una playlist curada en base a nuestros datos. Interfaz java customizada. Conexión a base de datos. Registro de usuarios y preferencias de canciones. Lectura de metadatos con Apache Tika.",
+                "photo": "jrecomendador.png",
+                "date": "May 2019",
+                "tags": [
+                    "java",
+                    "mysql",
+                    "apache tika"
+                ],
+                "repository":{"type":"github","url":"https://github.com/FranAFV/jRecomendador"}
+            },
+            "url":"https://github.com/FranAFV/jRecomendador"
+
         }
 ]
